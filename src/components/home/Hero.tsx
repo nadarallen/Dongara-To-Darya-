@@ -2,24 +2,28 @@
 
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import dynamic from 'next/dynamic';
-
-const HeroScene = dynamic(() => import('./HeroScene'), { ssr: false });
+import Image from "next/image";
 
 export default function Hero() {
     return (
         <section className="relative w-full h-[100dvh] min-h-[600px] flex items-center overflow-hidden bg-brand-beige">
-            {/* 3D Scene Container / Fallback Gradient */}
+            {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-clay/20 via-brand-beige to-brand-navy/20" />
-                <HeroScene />
+                <Image
+                    src="/images/hero-background.png"
+                    alt="Dongar to Darya Farm to Port Landscape"
+                    fill
+                    priority
+                    className="object-cover object-bottom opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-beige/90 via-brand-beige/60 to-transparent" />
             </div>
 
             {/* Content Overlay */}
-            <div className="relative z-10 container mx-auto px-4 md:px-6 pointer-events-none">
+            <div className="relative z-10 container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Left Text Block */}
-                    <div className="pointer-events-auto space-y-8 glass-panel p-8 md:p-12 rounded-3xl max-w-xl">
+                    <div className="space-y-8 glass-panel p-8 md:p-12 rounded-3xl max-w-xl shadow-2xl backdrop-blur-md bg-white/30 border border-white/40">
                         <div className="space-y-4">
                             <span className="inline-block px-4 py-1.5 rounded-full bg-brand-mango/20 text-brand-navy font-bold text-sm tracking-wide border border-brand-mango/30">
                                 PREMIUM INDIAN EXPORTS
@@ -39,22 +43,21 @@ export default function Hero() {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button
                                 size="lg"
-                                className="gap-2 shadow-brand-mango/20"
+                                className="gap-2 shadow-brand-mango/20 hover:bg-brand-mango hover:text-brand-navy"
                                 onClick={() => window.open("https://wa.me/918419921183", "_blank")}
                             >
                                 <MessageCircle size={20} />
                                 WhatsApp Quote
                             </Button>
-                            <Button size="lg" variant="outline" className="gap-2 bg-white/50 backdrop-blur-sm">
+                            <Button size="lg" variant="outline" className="gap-2 bg-white/50 backdrop-blur-sm border-brand-navy/20 hover:bg-white/80">
                                 View Products
                                 <ArrowRight size={20} />
                             </Button>
                         </div>
                     </div>
 
-                    {/* Right visual placeholder (will be replaced by 3D elements) */}
+                    {/* Right visual placeholder (Empty) */}
                     <div className="hidden md:block">
-                        {/* Visual space for 3D Port elements */}
                     </div>
                 </div>
             </div>
