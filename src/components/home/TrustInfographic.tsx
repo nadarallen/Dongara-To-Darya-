@@ -42,7 +42,8 @@ export default function TrustInfographic() {
     return (
         <section className="py-24 bg-secondary relative overflow-hidden">
             {/* Background Decor */}
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-10 pointer-events-none"></div>
+            {/* Lightweight inline noise — replaces 792KB noise.png */}
+            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E")`, backgroundSize: '200px 200px' }}></div>
 
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 space-y-4">

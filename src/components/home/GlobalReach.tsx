@@ -37,6 +37,8 @@ export default function GlobalReach() {
                                 src={logisticMap}
                                 alt="Global Export Map"
                                 fill
+                                loading="lazy"
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-contain opacity-90 drop-shadow-2xl"
                             />
                         </div>

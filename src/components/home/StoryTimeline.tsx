@@ -74,6 +74,7 @@ export default function StoryTimeline() {
                                     src={steps[activeStep].image}
                                     alt={steps[activeStep].title}
                                     fill
+                                    loading="lazy"
                                     className="object-contain drop-shadow-2xl mix-blend-multiply transition-transform hover:scale-105 duration-700 p-8"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />

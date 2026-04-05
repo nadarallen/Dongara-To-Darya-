@@ -21,6 +21,7 @@ export default function Hero() {
                     src="/images/hero-background.png"
                     alt="Dongara to Darya Mango Orchard"
                     fill
+                    priority
                     className="object-cover object-center opacity-40 mix-blend-overlay"
                     sizes="100vw"
                 />
@@ -49,14 +50,14 @@ export default function Hero() {
                     transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                     className="absolute top-[30%] right-[20%] opacity-25 w-16 h-16 md:w-24 md:h-24 blur-[1px]"
                 >
-                    <Image src="/images/mango-product.png" alt="Mango" fill className="object-contain" sizes="(max-width: 768px) 4rem, 6rem" />
+                    <Image src="/images/mango-product.png" alt="Mango" fill loading="lazy" className="object-contain" sizes="(max-width: 768px) 4rem, 6rem" />
                 </motion.div>
                 <motion.div
                     animate={{ y: [0, 30, 0], x: [0, -20, 0], rotate: [0, -20, 0] }}
                     transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
                     className="absolute bottom-[30%] left-[15%] opacity-25 w-16 h-16 md:w-20 md:h-20 blur-[1px]"
                 >
-                    <Image src="/images/cashew-product.png" alt="Cashew" fill className="object-contain" sizes="(max-width: 768px) 4rem, 5rem" />
+                    <Image src="/images/cashew-product.png" alt="Cashew" fill loading="lazy" className="object-contain" sizes="(max-width: 768px) 4rem, 5rem" />
                 </motion.div>
             </div>
 

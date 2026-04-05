@@ -71,6 +71,7 @@ export default function ProductShowcase() {
                                         src={product.image}
                                         alt={product.name}
                                         fill
+                                        loading="lazy"
                                         className="object-contain drop-shadow-xl z-10"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                     />
@@ -146,6 +147,7 @@ export default function ProductShowcase() {
                             src="/images/pulp-product.png"
                             alt="Mango Pulp Jar"
                             fill
+                            loading="lazy"
                             className="object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.3)] hover:scale-105 transition-transform duration-700 ease-out p-8 relative z-10"
                             sizes="(max-width: 1024px) 100vw, 50vw"
                         />
